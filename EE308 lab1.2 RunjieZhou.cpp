@@ -7,7 +7,8 @@
 #include <vector>
 #include <map>
 using namespace std;
-int find_SubString(string s,string sub){
+int find_SubString(string s,string sub){//find the substring
+	
 	int index1 = 0;
 	int a = 0;
 	while((index1 = s.find(sub,index1)) != s.npos){
