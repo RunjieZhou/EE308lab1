@@ -16,7 +16,8 @@ int find_SubString(string s,string sub){
 	}
 	return a;
 }
-vector<int> lookforswi(vector<string> v1){
+vector<int> lookforswi(vector<string> v1){//we find out the switch
+	
 	
 	vector<int> ofoutput;
 	stack<char> sto;
