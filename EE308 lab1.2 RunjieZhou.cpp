@@ -66,7 +66,7 @@ vector<string> processStr11(string str){//process string
 	}
 	return vct;
 }
-vector<int> seelifel(vector<string> v){
+vector<int> seelifel(vector<string> v){//we use stack
 	stack<bool> sto;
 	vector<int> ofoutput;
 	int value1 = 0,value2 = 0;
