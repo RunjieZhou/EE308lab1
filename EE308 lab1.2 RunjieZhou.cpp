@@ -113,19 +113,11 @@ int main() {
 	int level;
 	cout << "Please input the level you need" << endl;
 	scanf("%d",&level);
-	ifstream ifile(place);
-	ostringstream buf;
-	char ch;
-	while (buf && ifile.get(ch))
-		buf.put(ch);
-
-	ifile.close();
-	
-	string str = buf.str();//////////////////////////////////////////////////////////////////////////////
+	string str = readInof(place);
 	vector<string> ans = processStr11(str);
-
-	vector<int> ofoutput = seelifel(ans);/////////////////////////////////////////////////////////
-
+	// if - else & if -elseif -else
+	vector<int> ofoutput = seelifel(ans);
+	// switch-case
 	vector<int> ofoutput_switch = lookforswi(ans);
 	//
 	smatch outOf;
