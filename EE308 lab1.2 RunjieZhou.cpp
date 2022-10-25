@@ -49,29 +49,8 @@ vector<int> lookforswi(vector<string> v1){
 	}
 	return ofoutput;
 }
-
-
-
-int main() {
-
-	string place;
-	cout << "Please input the file place" << endl;
-	cin >> place;
-	cin.clear(); 
-	cin.sync(); 
-	int level;
-	cout << "Please input the level you need" << endl;
-	scanf("%d",&level);
-	string filename=place,
-	ifstream ifile(filename);
-	ostringstream buf;
-	char ch;
-	while (buf && ifile.get(ch))
-		buf.put(ch);
-
-	ifile.close();
-	
-	string str = buf.str();;
+vector<string> processStr11(string str){
+	vector<string> vct;
 	string sub = "";
 	for(int i=0;i<str.length();i++){
 		if(str[i] == '\n'){
@@ -82,9 +61,9 @@ int main() {
 			sub =sub + str[i];
 		}
 	}
-
-	vector<string> v=ans;
-	
+	return vct;
+}
+vector<int> seelifel(vector<string> v){
 	stack<bool> sto;
 	vector<int> ofoutput;
 	int value1 = 0,value2 = 0;
@@ -111,7 +90,42 @@ int main() {
 	}
 	ofoutput.push_back(value1);
 	ofoutput.push_back(value2);
-	// switch-case
+	return ofoutput;
+}
+string readInof(string filename) {
+	ifstream ifile(filename);
+	ostringstream buf;
+	char ch;
+	while (buf && ifile.get(ch))
+		buf.put(ch);
+
+	ifile.close();
+	return buf.str();
+}
+
+int main() {
+
+	string place;
+	cout << "Please input the file place" << endl;
+	cin >> place;
+	cin.clear(); 
+	cin.sync(); 
+	int level;
+	cout << "Please input the level you need" << endl;
+	scanf("%d",&level);
+	ifstream ifile(place);
+	ostringstream buf;
+	char ch;
+	while (buf && ifile.get(ch))
+		buf.put(ch);
+
+	ifile.close();
+	
+	string str = buf.str();//////////////////////////////////////////////////////////////////////////////
+	vector<string> ans = processStr11(str);
+
+	vector<int> ofoutput = seelifel(ans);/////////////////////////////////////////////////////////
+
 	vector<int> ofoutput_switch = lookforswi(ans);
 	//
 	smatch outOf;
