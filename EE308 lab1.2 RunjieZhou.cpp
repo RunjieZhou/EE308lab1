@@ -131,7 +131,8 @@ int main() {
 		number =number+1;
 		iterStart = outOf[0].second;
 	}
-	if(level == 1){
+	if(level == 1){//when level =1
+		
 		cout << "total num: " << number << endl;
 	}else if(level == 2){
 		cout << "total num: " << number << endl;
