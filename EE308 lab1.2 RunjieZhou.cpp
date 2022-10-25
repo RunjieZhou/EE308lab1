@@ -49,7 +49,8 @@ vector<int> lookforswi(vector<string> v1){
 	}
 	return ofoutput;
 }
-vector<string> processStr11(string str){
+vector<string> processStr11(string str){//process string
+	
 	vector<string> vct;
 	string sub = "";
 	for(int i=0;i<str.length();i++){
@@ -92,19 +93,18 @@ vector<int> seelifel(vector<string> v){
 	ofoutput.push_back(value2);
 	return ofoutput;
 }
-string readInof(string filename) {
+string readInof(string filename) {//return relevant string
 	ifstream ifile(filename);
 	ostringstream buf;
 	char ch;
 	while (buf && ifile.get(ch))
 		buf.put(ch);
-
 	ifile.close();
 	return buf.str();
 }
 
 int main() {
-
+	
 	string place;
 	cout << "Please input the file place" << endl;
 	cin >> place;
@@ -115,12 +115,12 @@ int main() {
 	scanf("%d",&level);
 	string str = readInof(place);
 	vector<string> ans = processStr11(str);
-	// if - else & if -elseif -else
+	
 	vector<int> ofoutput = seelifel(ans);
-	// switch-case
+
 	vector<int> ofoutput_switch = lookforswi(ans);
 	//
-	smatch outOf;
+	smatch outOf;//the word
 	regex pattern("void|signed|unsigned|short|long|int|float|double|char|enum|struct|union|typedef|Bool|Imaginary|Complex|const|volatile|restrict|inline|auto|static|extern|register|sizeof|goto|return|break|continue|if|else|switch|case|default|do\\s|while|for");
 	string::const_iterator iterStart = str.begin();
 	string::const_iterator iterEnd = str.end();
