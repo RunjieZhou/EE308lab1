@@ -143,7 +143,7 @@ int main() {
 		for(int i=0;i<ofoutput_switch.size();i++){
 			cout << ofoutput_switch[i] << " ";
 		}cout << endl;
-	}else if(level == 3){
+	}else if(level == 3){//level=3
 		cout << "total num: " << number << endl;
 		cout << "switch num: " << ofoutput_switch.size() << endl;
 		cout << "case num: ";
